@@ -14,10 +14,18 @@ class FizzBuzz
 	def fizz_printer(number)
 		array = []
 
-		(1..number).each do | num | 
-			array.push(num)
+		(1..number).each do | num |
+			if fizz_buzz?(num)
+				array.push("FizzBuzz")
+			elsif buzz?(num)
+				array.push("Buzz")
+			elsif fizz?(num)
+				array.push("Fizz")
+			else
+				array.push(num)
+			end
 		end
-
+		
 		array
 	end
 end

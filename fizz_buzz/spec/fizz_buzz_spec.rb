@@ -41,5 +41,18 @@ describe "FizzBuzz" do
 		it "should count from 1 to a number, and return a new array with that number of elements" do 
 			expect(@buzzer.fizz_printer(100).length).to eq(100)
 		end
+
+		it "should replace multiples of 3 with fizz" do 
+			expect(@buzzer.fizz_printer(100)[2]).to eq("Fizz")
+		end
+
+		it "should replace multiples of 5 with buzz" do 
+			expect(@buzzer.fizz_printer(100)[4]).to eq("Buzz")
+		end
+
+		it "should replace multiples of 5 AND 3 with fizzbuzz" do 
+			expect(@buzzer.fizz_printer(100)[14]).to eq("FizzBuzz")
+		end
+
 	end
 end
